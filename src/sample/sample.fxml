@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <Button fx:id="clickMe" layoutX="283.0" layoutY="207.0" mnemonicParsing="false" onAction="#clicked" text="click ME" />
-      <Label fx:id="welcomeLable" layoutX="176.0" layoutY="81.0" prefHeight="46.0" prefWidth="231.0" />
-   </children>
-</AnchorPane>
+
+<BorderPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="mainWindow" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+      <HBox fx:id="footerHbox" prefHeight="59.0" prefWidth="800.0" styleClass="footer" BorderPane.alignment="CENTER" />
+   </bottom>
+   <top>
+      <HBox fx:id="hederHbox" prefHeight="52.0" prefWidth="800.0" styleClass="heder" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="rightPane" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="ancherPane" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

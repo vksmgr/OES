@@ -1,0 +1,28 @@
+.mainWindow{
+    -fx-background-color: white;
+}
+
+.hederwindow{
+    -fx-background-color: aquamarine;
+}
+.button{
+    -fx-background-color: #e74c3c;
+}
+.buttonText{
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.footer{
+    -fx-background-color: black;
+}
+
+.heder{
+    -fx-background-color: green;
+}
+
+.rightPane{
+    -fx-background-color: chartreuse;
+}
+.ancherPane{
+    -fx-background-color: blanchedalmond;
+}
