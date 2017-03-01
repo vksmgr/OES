@@ -13,11 +13,11 @@
     -fx-font-size: 15px;
 }
 .footer{
-    -fx-background-color: black;
+    -fx-background-color: #FFFFFF;
 }
 
 .heder{
-    -fx-background-color: green;
+    -fx-background-color: #2ecc71;
 }
 
 .rightPane{
@@ -25,4 +25,16 @@
 }
 .ancherPane{
     -fx-background-color: blanchedalmond;
+}
+
+.clearButton{
+    -fx-background-color: #f1c40f;
+}
+
+.markForReviewButton{
+    -fx-background-color: #9b59b6;
+}
+
+.saveButton{
+    -fx-background-color: #2ecc71;
 }

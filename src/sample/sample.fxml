@@ -1,22 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="mainWindow" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <bottom>
-      <HBox fx:id="footerHbox" prefHeight="59.0" prefWidth="800.0" styleClass="footer" BorderPane.alignment="CENTER" />
+      <HBox fx:id="footerHbox" prefHeight="59.0" styleClass="footer" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="buttonMarkForReview" layoutX="12.0" layoutY="17.0" onAction="#buttonMarkForReviewOnClick" prefHeight="31.0" prefWidth="144.0" text="Mark For Review">
+                     <styleClass>
+                        <String fx:value="buttonText" />
+                        <String fx:value="markForReviewButton" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonClear" layoutX="186.0" layoutY="18.0" onAction="#buttonClearOnClick" text="Clear">
+                     <styleClass>
+                        <String fx:value="buttonText" />
+                        <String fx:value="clearButton" />
+                     </styleClass>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonSave" layoutX="272.0" layoutY="18.0" onAction="#buttonSaveOnClick" text="SAVE">
+                     <styleClass>
+                        <String fx:value="saveButton" />
+                        <String fx:value="buttonText" />
+                     </styleClass>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="buttonFinish" onAction="#buttonFinishOnClick" styleClass="buttonText" text="FINISH" />
+               </children>
+            </VBox>
+         </children></HBox>
    </bottom>
    <top>
-      <HBox fx:id="hederHbox" prefHeight="52.0" prefWidth="800.0" styleClass="heder" BorderPane.alignment="CENTER" />
+      <HBox fx:id="hederHbox" prefHeight="52.0" prefWidth="800.0" styleClass="heder" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="labelTitle" layoutX="14.0" layoutY="6.0" prefHeight="40.0" prefWidth="302.0" text="FREE ONLINE EXAM SYSTEM" textFill="#fcf6f6">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></HBox>
    </top>
-   <right>
-      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="rightPane" BorderPane.alignment="CENTER" />
-   </right>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="ancherPane" BorderPane.alignment="CENTER" />
    </center>
+   <right>
+      <VBox prefHeight="489.0" prefWidth="173.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="133.0" prefWidth="173.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <ImageView fx:id="imageViewProfile" fitHeight="110.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../raw/images/dpi.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="labelProfileId" layoutX="99.0" layoutY="14.0" prefHeight="17.0" prefWidth="72.0" text="ID : R456X45" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="409.0" prefWidth="173.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </right>
 </BorderPane>
