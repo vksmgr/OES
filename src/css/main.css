@@ -13,7 +13,7 @@
     -fx-font-size: 15px;
 }
 .footer{
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #ecf0f1;
 }
 
 .heder{
@@ -21,10 +21,10 @@
 }
 
 .rightPane{
-    -fx-background-color: chartreuse;
+    -fx-background-color: #bdc3c7;
 }
 .ancherPane{
-    -fx-background-color: blanchedalmond;
+    -fx-background-color: white;
 }
 
 .clearButton{
@@ -37,4 +37,7 @@
 
 .saveButton{
     -fx-background-color: #2ecc71;
+}
+.calculatorButton{
+    -fx-background-color: #3498db;
 }

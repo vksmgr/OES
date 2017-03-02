@@ -10,6 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
 <BorderPane fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="mainWindow" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <bottom>
@@ -56,26 +57,37 @@
                   </Label>
                </children>
             </AnchorPane>
+            <HBox alignment="CENTER" prefHeight="52.0" prefWidth="340.0" spacing="50.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="buttonText" text="Timer :" />
+                  <Label fx:id="labelTimer" />
+                  <JFXButton fx:id="buttonCalculator" onAction="#buttonCalculatorOnClick" prefHeight="16.0" prefWidth="68.0" styleClass="calculatorButton" text="calculator" textFill="#fffafa" />
+               </children>
+            </HBox>
          </children></HBox>
    </top>
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="ancherPane" BorderPane.alignment="CENTER" />
-   </center>
    <right>
       <VBox prefHeight="489.0" prefWidth="173.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="133.0" prefWidth="173.0" VBox.vgrow="ALWAYS">
+            <AnchorPane prefHeight="133.0" prefWidth="173.0" styleClass="footer" VBox.vgrow="ALWAYS">
                <children>
-                  <ImageView fx:id="imageViewProfile" fitHeight="110.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imageViewProfile" fitHeight="112.0" fitWidth="92.0" layoutX="36.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../raw/images/dpi.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="labelProfileId" layoutX="99.0" layoutY="14.0" prefHeight="17.0" prefWidth="72.0" text="ID : R456X45" />
+                  <Label fx:id="labelProfileId" layoutX="48.0" layoutY="97.0" prefHeight="17.0" prefWidth="72.0" text="ID : R456X45" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="409.0" prefWidth="173.0" VBox.vgrow="ALWAYS" />
+            <AnchorPane prefHeight="409.0" prefWidth="173.0" styleClass="footer" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
    </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <WebView fx:id="webView" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
 </BorderPane>

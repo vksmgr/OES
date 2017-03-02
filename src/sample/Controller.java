@@ -4,13 +4,14 @@ import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 public class Controller {
-
 
     @FXML
     private BorderPane mainWindow;
@@ -33,18 +34,48 @@ public class Controller {
     @FXML
     private HBox hederHbox;
 
+    @FXML
+    private Label labelTitle;
 
+    @FXML
+    private Label labelTimer;
 
-    public void buttonMarkForReviewOnClick(ActionEvent actionEvent) {
+    @FXML
+    private JFXButton buttonCalculator;
+
+    @FXML
+    private ImageView imageViewProfile;
+
+    @FXML
+    private Label labelProfileId;
+
+    @FXML
+    private WebView webView;
+
+    @FXML
+    void buttonCalculatorOnClick(ActionEvent event) {
+
     }
 
-    public void buttonClearOnClick(ActionEvent actionEvent) {
+    @FXML
+    void buttonClearOnClick(ActionEvent event) {
+
     }
 
-    public void buttonSaveOnClick(ActionEvent actionEvent) {
-    }
-
-    public void buttonFinishOnClick(ActionEvent actionEvent) {
+    @FXML
+    void buttonFinishOnClick(ActionEvent event) {
         Platform.exit();
     }
+
+    @FXML
+    void buttonMarkForReviewOnClick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void buttonSaveOnClick(ActionEvent event) {
+        WebEngine engine = webView.getEngine();
+        engine.load("https://google.com");
+    }
+
 }
